@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{%block content %}
+<div style='width:30%;margin: auto'>
+    <h1>Well Come to  Store Book</h1>
+    <form method='post'method='/show_book/'>
+        {% csrf_token %}
+        {{form|crispy}}
+        <button class='btn btn-success' type='submit'>Submit</button>
+    </form>
+</div>
+{% endblock %}
